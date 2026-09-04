@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Question Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">Q</span><span>Question Bank</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="question-bank.html">Question Bank</a>
+        <a href="practice.html">Practice</a>
+        <a class="active" href="admin.html">Admin</a>
+      </nav>
+      <span class="role-chip">Admin Preview</span>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero page-hero-compact">
+      <div class="container">
+        <span class="eyebrow">ADMIN</span>
+        <h1>Manage your question bank.</h1>
+        <p>Frontend-only management screen for V1. Data changes are stored in your browser until a real database is connected.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container admin-grid">
+        <div class="admin-stat card"><span>Total Questions</span><strong id="adminTotal">0</strong></div>
+        <div class="admin-stat card"><span>Easy</span><strong id="adminEasy">0</strong></div>
+        <div class="admin-stat card"><span>Medium</span><strong id="adminMedium">0</strong></div>
+        <div class="admin-stat card"><span>Hard</span><strong id="adminHard">0</strong></div>
+      </div>
+    </section>
+
+    <section class="section section-topless">
+      <div class="container admin-layout">
+        <section class="card admin-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">QUESTION MANAGEMENT</span><h2 id="editorTitle">Add Question</h2></div>
+            <button class="text-button" id="resetForm" type="button">Reset</button>
+          </div>
+          <form id="questionForm" class="question-form">
+            <div class="form-grid two-col">
+              <label>Question ID<input name="id" required placeholder="Q0001" /></label>
+              <label>Marks<input name="marks" type="number" min="1" required value="5" /></label>
+            </div>
+            <div class="form-grid two-col">
+              <label>Chapter
+                <select name="chapter" id="adminChapter" required></select>
+              </label>
+              <label>Difficulty
+                <select name="difficulty" required><option>Easy</option><option selected>Medium</option><option>Hard</option></select>
+              </label>
+            </div>
+            <div class="form-grid two-col">
+              <label>Source<input name="source" required placeholder="SPM 2025" /></label>
+              <label>Year<input name="year" type="number" min="2000" max="2100" value="2025" /></label>
+            </div>
+            <label>Tags<input name="tags" placeholder="Functions, Algebra" /></label>
+            <label>Question
+              <textarea name="question" required placeholder="Enter the question. Use LaTeX such as \\(f(x)=x^2+2x\\)."></textarea>
+            </label>
+            <label>Answer<input name="answer" required placeholder="Enter the final answer." /></label>
+            <label>Full Solution
+              <textarea name="solution" required placeholder="Enter the complete working / solution."></textarea>
+            </label>
+            <div class="form-grid two-col">
+              <label>Visibility<select name="visibility"><option>Public</option><option>Private</option></select></label>
+              <label>Status<select name="status"><option>Active</option><option>Archived</option></select></label>
+            </div>
+            <button class="btn btn-primary" type="submit">Save Question</button>
+            <p id="formMessage" class="form-message" role="status"></p>
+          </form>
+        </section>
+
+        <aside class="card admin-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">QUESTION LIST</span><h2>Recent Questions</h2></div>
+            <a class="inline-link" href="question-bank.html">Open Bank →</a>
+          </div>
+          <div id="adminQuestionList" class="admin-question-list"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Question Bank. Admin frontend preview.</p>
+      <a href="question-bank.html">Question Bank</a>
+    </div>
+  </footer>
+
+  <script src="assets/questions.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/admin.js"></script>
+</body>
+</html>
