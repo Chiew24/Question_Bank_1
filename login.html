@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Question Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-card card">
+      <a class="brand" href="index.html"><span class="brand-mark">Q</span><span>Question Bank</span></a>
+      <span class="eyebrow">ACCOUNT ACCESS</span>
+      <h1>Welcome back.</h1>
+      <p class="muted">V1 frontend demo. Real authentication will be connected later.</p>
+      <form id="loginForm" class="question-form">
+        <label>Email<input type="email" id="email" required placeholder="you@example.com" /></label>
+        <label>Password<input type="password" id="password" required placeholder="••••••••" /></label>
+        <label>Role<select id="role"><option>Student</option><option>Teacher</option><option>Admin</option></select></label>
+        <button class="btn btn-primary" type="submit">Continue</button>
+        <p id="loginMessage" class="form-message"></p>
+      </form>
+      <a class="inline-link" href="index.html">← Back to Home</a>
+    </section>
+  </main>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const role = document.getElementById('role').value;
+      localStorage.setItem('qb-demo-user', JSON.stringify({ email: document.getElementById('email').value, role }));
+      const paths = { Student: 'student.html', Teacher: 'teacher.html', Admin: 'admin.html' };
+      window.location.href = paths[role];
+    });
+  </script>
+</body>
+</html>
