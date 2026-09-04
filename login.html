@@ -19,7 +19,7 @@
       <form id="loginForm" class="question-form">
         <label>Email<input type="email" id="email" required placeholder="you@example.com" /></label>
         <label>Password<input type="password" id="password" required placeholder="••••••••" /></label>
-        <label>Role<select id="role"><option>Student</option><option>Teacher</option><option>Admin</option></select></label>
+        <label>Role<select id="role"><option>Student</option><option>Admin</option></select></label>
         <button class="btn btn-primary" type="submit">Continue</button>
         <p id="loginMessage" class="form-message"></p>
       </form>
@@ -31,7 +31,7 @@
       event.preventDefault();
       const role = document.getElementById('role').value;
       localStorage.setItem('qb-demo-user', JSON.stringify({ email: document.getElementById('email').value, role }));
-      const paths = { Student: 'student.html', Teacher: 'teacher.html', Admin: 'admin.html' };
+      const paths = { Student: 'student.html', Admin: 'admin.html' };
       window.location.href = paths[role];
     });
   </script>
