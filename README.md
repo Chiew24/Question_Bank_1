@@ -13,19 +13,18 @@ A responsive frontend prototype for an online mathematics Question Bank platform
 - Admin question management: add, edit, delete and preview
 - Local browser storage for the frontend demo
 - Login / role entry prototype
-- Teacher dashboard prototype
 - Student dashboard prototype
+- Paper Generator with manual question selection and PDF printing
 - Responsive layout for desktop, tablet and mobile
 
 ## Roles planned
 
 - Admin
-- Teacher
 - Student
 
 ## Important
 
-This is a **frontend-first prototype**. Login, question storage, classes, assignments, analytics, AI Paper Generator, AI Question Generator and AI Tutor are represented by UI entry points or planned flows and are not connected to a production backend yet.
+This is a **frontend-first prototype**. Login, question storage, student classes and assignments, analytics, AI Paper Generator, AI Question Generator and AI Tutor are planned for later phases and are not connected to a production backend yet.
 
 The next technical phase can connect the UI to authentication and a PostgreSQL/Supabase database without changing the main information architecture.
 
