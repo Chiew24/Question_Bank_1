@@ -4,59 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paper Generator | Question Bank</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/style.css" /><link rel="stylesheet" href="assets/features.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html"><span class="brand-mark">Q</span><span>Question Bank</span></a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a><a href="question-bank.html">Question Bank</a><a class="active" href="paper.html">Paper</a><a href="practice.html">Practice</a><a href="teacher.html">Teacher</a>
-      </nav>
-      <a class="nav-cta" href="question-bank.html">Back to Bank</a>
-    </div>
-  </header>
-
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">Q</span><span>Question Bank</span></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="question-bank.html">Question Bank</a><a class="active" href="paper.html">Paper</a><a href="practice.html">Practice</a><a href="teacher.html">Teacher</a></nav><a class="nav-cta" href="question-bank.html">Back to Bank</a></div></header>
   <main class="page-shell">
-    <section class="page-hero page-hero-compact">
-      <div class="container"><span class="eyebrow">PAPER GENERATOR</span><h1>Build a paper from your question bank.</h1><p>Select questions, organise them into sections, adjust marks, then use Print / Save as PDF.</p></div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container paper-layout">
-        <aside class="card paper-sidebar">
-          <div class="panel-heading"><div><span class="eyebrow">QUESTION PICKER</span><h2>Available Questions</h2></div><span class="score-chip" id="selectedCount">0 selected</span></div>
-          <label>Search<input id="paperSearch" type="search" placeholder="Search question ID, tag..." /></label>
-          <div id="paperQuestionPicker" class="paper-question-picker"></div>
-        </aside>
-
-        <section class="card paper-workspace">
-          <div class="paper-toolbar">
-            <div><span class="eyebrow">PAPER SETTINGS</span><h2>Paper Details</h2></div>
-            <button class="btn btn-primary" id="printPaper" type="button">Print / Save PDF</button>
-          </div>
-          <div class="form-grid two-col paper-settings">
-            <label>Paper Title<input id="paperTitle" value="Form 4 Functions Practice" /></label>
-            <label>Subtitle<input id="paperSubtitle" value="Additional Mathematics" /></label>
-            <label>Total Time (minutes)<input id="paperTime" type="number" min="1" value="60" /></label>
-            <label>Default Section<input id="defaultSection" value="Section A" /></label>
-          </div>
-
-          <div class="paper-preview card" id="paperPreview">
-            <div class="paper-head"><h1 id="previewTitle">Form 4 Functions Practice</h1><p id="previewSubtitle">Additional Mathematics</p><div class="paper-info"><span id="previewTime">Time: 60 minutes</span><span id="previewMarks">Total: 0 Marks</span></div></div>
-            <div id="paperItems" class="paper-items"><div class="paper-empty">Select questions from the left to build your paper.</div></div>
-          </div>
-        </section>
-      </div>
-    </section>
+    <section class="page-hero page-hero-compact"><div class="container"><span class="eyebrow">PAPER GENERATOR</span><h1>Build a paper from your question bank.</h1><p>Select questions, organise them into sections, adjust marks, then use Print / Save as PDF.</p></div></section>
+    <section class="section section-tight"><div class="container paper-layout">
+      <aside class="card paper-sidebar"><div class="panel-heading"><div><span class="eyebrow">QUESTION PICKER</span><h2>Available Questions</h2></div><span class="score-chip" id="selectedCount">0 selected</span></div><label>Search<input id="paperSearch" type="search" placeholder="Search question ID, tag..." /></label><div id="paperQuestionPicker" class="paper-question-picker"></div></aside>
+      <section class="card paper-workspace"><div class="paper-toolbar"><div><span class="eyebrow">PAPER SETTINGS</span><h2>Paper Details</h2></div><button class="btn btn-primary" id="printPaper" type="button">Print / Save PDF</button></div>
+        <div class="form-grid two-col paper-settings"><label>Paper Title<input id="paperTitle" value="Form 4 Functions Practice" /></label><label>Subtitle<input id="paperSubtitle" value="Additional Mathematics" /></label><label>Total Time (minutes)<input id="paperTime" type="number" min="1" value="60" /></label><label>Default Section<input id="defaultSection" value="Section A" /></label></div>
+        <div class="paper-preview card" id="paperPreview"><div class="paper-head"><h1 id="previewTitle">Form 4 Functions Practice</h1><p id="previewSubtitle">Additional Mathematics</p><div class="paper-info"><span id="previewTime">Time: 60 minutes</span><span id="previewMarks">Total: 0 Marks</span></div></div><div id="paperItems" class="paper-items"><div class="paper-empty">Select questions from the left to build your paper.</div></div></div>
+      </section>
+    </div></section>
   </main>
-
-  <script src="assets/questions.js"></script>
-  <script src="assets/app.js"></script>
-  <script src="assets/paper.js"></script>
+  <script src="assets/questions.js"></script><script src="assets/app.js"></script><script src="assets/paper.js"></script>
 </body>
 </html>
